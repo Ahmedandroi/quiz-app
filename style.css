@@ -1,0 +1,285 @@
+:root
+{
+    --main-color: #FF9800;
+    --border: 1px solid #ccc;
+}
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container
+{
+    padding: 50px;
+    background-color: #eee;
+}
+
+.none
+{
+    display: none;
+}
+
+.overlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(36, 100%, 50%, 0.9);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay input
+{
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+
+
+.overlay input[type='submit']
+{
+    cursor: pointer;
+}
+
+.content
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 1px solid #ccc;
+    height: calc(100vh - 100px);
+}
+
+.content .left
+{
+    width: 200px;
+    border-right: var(--border);
+    height: 100%;
+    padding: 20px;
+}
+
+.content .left .timer span
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content .center
+{
+    flex: 1;
+    border-right: var(--border);
+    height: 100%;
+}
+
+.content .center .navbar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: var(--border)
+}
+
+.content .center .navbar .name
+{
+    font-size: 24px;
+    color: var(--main-color);
+}
+
+.content .center .navbar img
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+
+
+.content .center .question-content>div:not(:last-child)
+{
+    padding: 50px 20px;
+    border-bottom: var(--border);
+}
+
+
+.content .center .question-content .question
+{
+    text-transform: capitalize;
+    font-size: 18px;
+}
+
+
+.content .center .question-content .answers
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.content .center .question-content .answers p
+{
+    cursor: pointer;
+    background-color: #ccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition-duration: 0.3s;
+}
+
+.content .center .question-content .answers p:hover
+{
+    background-color: #ddd;
+
+}
+
+.content .center .controls
+{
+    border-bottom: transparent;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .center .controls button
+{
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.content .center .controls button:first-child
+{
+    background-color: #4CAF50;
+}
+
+.content .center .controls button:nth-child(2)
+{
+    background-color: #9E9E9E;
+}
+
+.content .center .controls button:nth-child(3)
+{
+    background-color: #2196F3;
+}
+
+.content .right
+{
+    width: 200px;
+    padding: 20px;
+}
+
+.content .right .bullet
+{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bullet li
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.bullet li.disabled
+{
+    pointer-events: none;
+    opacity: 0.5;
+    ;
+}
+
+.bullet li.active,
+.bullet li:hover
+{
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.content .right .end-exam
+{
+    display: block;
+    margin-top: 100%;
+    float: right;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    background-color: #9E9E9E;
+    color: white;
+    letter-spacing: 1px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.end
+{
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-card
+{
+    width: fit-content;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.try-again
+{
+    display: block;
+    border: none;
+    outline: none;
+    background-color: #9E9E9E;
+    color: white;
+    letter-spacing: 1px;
+    padding: 5px 8px;
+    margin: 20px auto;
+    text-transform: capitalize;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.end .result-msg
+{
+    margin-top: 10px;
+    font-size: 18px;
+    color: #FF9800;
+}

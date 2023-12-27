@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>
+        Quiz App
+    </title>
+</head>
+
+<body>
+    <div class="overlay">
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="submit" value="Start">
+        </form>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="left">
+                <div class="timer">timer: <span>30:00</span></div>
+            </div>
+            <div class="center">
+                <div class="navbar">
+                    <div class="name">Ahmed</div>
+                    <div class="review-label">
+
+                    </div>
+                    <div class="avatar">
+                        <img src="images/avatar.jpg" alt="avatar">
+                    </div>
+                </div>
+                <div class="question-content">
+                    <div class="question">
+                    </div>
+                    <div class="answers">
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div class="controls">
+                        <button class="submit">submit</button>
+                        <button class="will-review">will review</button>
+                        <button class="skip">skip</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <ul class="bullet">
+                </ul>
+                <button class="end-exam">End Exam</button>
+            </div>
+        </div>
+    </div>
+    <div class="overlay end">
+        <div class="score-card">
+            <h2>Exam Results</h2>
+            <p class="result-msg"></p>
+            <button class="try-again">try again</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
